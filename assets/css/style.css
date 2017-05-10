@@ -5,3 +5,18 @@ body {
   color: #777;
   background: url("../images/concrete_seamless.png");
 }
+<style>
+body {
+background-color: lightblue;
+font-family: Helvetica;
+}
+
+#main {
+width: 80%;
+max-width: 950px;
+border: 1px gray solid;
+margin: auto;
+padding: 10px;
+background-color: white;
+border-radius: 10px;
+}
