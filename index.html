@@ -11,21 +11,33 @@
 
 <body>
 <div class="jumbotron">
-<input type = "text" id ="timer">
+<input type="text" id ="timer">
+<button id=start>Start Trivia Game</button>
+<h1 class="text-center"> 80's Trivia Game!</h1>
+<div class="text-center">
 
-<h1 class = "text-center"> 80's Trivia Game!</h1>
-<div class ="text-center">
-
-
-      <div id="display">00:00</div>
-      
-    <p> Time Remaining
-    <p> Correct Answers:
-    <p> Incorrect Answers:
-    <p> Unanswered:
+ <div>Time Remaining <span id="time">time</span></div>
+ <div id="timeup"></div > 
 
     <!-- jQuery -->
 
+
+<form  id="form1" action=" ">
+<p>Which 80's movie features a hot shot navial aviator pilot with the call sign of Maverick?</p>
+<input type="radio" name="variable"  />Harrison Ford.<br />
+<input type="radio" name="variable"  />Mel Gibson.<br />
+<input type="radio" name="variable" class="correct" />Tom Cruise<br />
+<input type="radio" name="variable"  />Brad Pitt.<br />
+
+<p>A movie where an alien comes to earth an a boy befriends him?</p>
+<input type="radio" name="sub" class="correct" />E.T.<br />
+<input type="radio" name="sub"  />Spaceballs.<br />
+<input type="radio" name="sub"  />Alien.<br />
+<input type="radio" name="sub"  />The Never Ending Story.<br />
+
+
+<input type="submit" value="Submit">
+</form>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
 
