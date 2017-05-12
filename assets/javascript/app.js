@@ -1,5 +1,6 @@
 var timer = 0;
 var chosenWord = "";
+var frustration;
 function startGame() {
 	counter = 0;
 	console.log("Button clicked and Game started");
@@ -22,6 +23,7 @@ function timer() {
 }
 
 function startTimer(duration, display) {
+    frustration = setInterval(function () { 
     var timer = duration, seconds;
     setInterval(function () {
         seconds = parseInt(timer % 25);
@@ -32,7 +34,7 @@ function startTimer(duration, display) {
             timer = duration;
         }
     }, 1000);
-}
+});
 
 window.onload = function () {
     var seconds = 1000 * 25,
@@ -40,7 +42,7 @@ window.onload = function () {
     startTimer(seconds, display);
 };
 
-
+		}
       //  Once number hits zero...
       if (timer === 0) {
 
@@ -57,8 +59,8 @@ window.onload = function () {
       //  Clears our intervalId
       //  We just pass the name of the interval
       //  to the clearInterval function.
-      clearInterval(intervalId);
-    }
+      clearInterval(frustration);
+ 
 
     //  Execute the run function.
     
