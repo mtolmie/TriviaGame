@@ -74,7 +74,6 @@ window.onload = function () {
       clearInterval(frustration);
   };
  
-
 function checkAnswers() {
 	document.onkeyup = function(event){
 		var question1 = "Tom Cruise";
@@ -83,8 +82,8 @@ function checkAnswers() {
 
 // if (question1 == Tom Cruise) {question1 = "Tom Cruise"};
 // if (question2 == E.T.) {question2 = "E.T."};
-// document.getElementById("question1").innerHTML = question1; 
-// document.getElementById("question2").innerHTML = question2; 
+// 	document.getElementById("question1").innerHTML = question1; 
+//  	document.getElementById("question2").innerHTML = question2; 
 
 var counter = 0;
 var rightGuesses= 0;
