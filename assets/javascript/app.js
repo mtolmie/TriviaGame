@@ -1,8 +1,4 @@
-var counter = 0;
-var wordsList = [
-      "Top Gun",
-      "E.T"
-    ];
+var timer = 0;
 var chosenWord = "";
 function startGame() {
 	counter = 0;
@@ -11,7 +7,6 @@ function startGame() {
 	checkAnswer();
 
 }
-
 function timer() {
 	setTimeout(twentyFiveSeconds, 1000 * 25);
 	function twentyFiveSeconds() {
@@ -26,9 +21,59 @@ function timer() {
 	
 }
 
+function startTimer(duration, display) {
+    var timer = duration, seconds;
+    setInterval(function () {
+        seconds = parseInt(timer % 25);
+        seconds = seconds < 25 ? "0" + seconds : seconds;
+	display.textContent = seconds;
 
-function checkAnswer() {
-document.onkeyup = function(event) {
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+}
+
+window.onload = function () {
+    var seconds = 1000 * 25,
+        display = document.querySelector('#time');
+    startTimer(seconds, display);
+};
+
+
+      //  Once number hits zero...
+      if (timer === 0) {
+
+        //  ...run the stop function.
+        stop();
+
+        //  Alert the user that time is up.
+        alert("Time Up!");
+      }
+
+    //  The stop function
+    function stop() {
+
+      //  Clears our intervalId
+      //  We just pass the name of the interval
+      //  to the clearInterval function.
+      clearInterval(intervalId);
+    }
+
+    //  Execute the run function.
+    
+
+
+
+
+
+
+
+
+
+
+// function checkAnswer() {
+// document.onkeyup = function(event) {
 
 
 
@@ -38,15 +83,17 @@ document.onkeyup = function(event) {
 // check to see if it has an attribute of class with the value of correct 
 // if yes, increment the correct answer counter 
 
-}
+
+
+
 
 // $( "#dataTable tbody tr" ).on( "click", function() {
 //   console.log( $( this ).text() );
-$(document).ready(function() {
-	$("#start").on("click", function(){
-		startGame();
-	});
-});
+// $(document).ready(function() {
+// 	$("#start").on("click", function(){
+// 		startGame();
+// 	});
+// });
 
 
 
